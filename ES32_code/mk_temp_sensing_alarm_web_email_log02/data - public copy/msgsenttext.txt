@@ -1,0 +1,1 @@
+- Sent from ESP32 temperature sensor 01
