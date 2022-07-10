@@ -1534,8 +1534,6 @@ void selectWiFi() {
 
 }
 
-
-
 // ******************************
 // **** make WiFi connection ****
 // ******************************
@@ -1588,8 +1586,13 @@ void connectWiFi() {
     Serial.print("IP address: ");
     delay(500);
     Serial.println(WiFi.localIP());
+    oledclear();
+    r1 = "IP addr:";
+    r2 = WiFi.localIP().toString();
+    oledtext(2, 0, 0, 0, 0, 24, r1, r2, "", "");
+    beep(3);
+    delay(3000);
     Serial.print("MAC address: ");
-    delay(500);
     Serial.println(WiFi.macAddress());
     delay(500);
     WiFi.setHostname(namehost.c_str());
